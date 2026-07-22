@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alina Bolz – Commercial Strategy · EMEA</title>
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="de" href="index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -63,6 +65,43 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--copper-light); }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .lang-switch a,
+  .lang-switch span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.6rem;
+    text-decoration: none;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s;
+  }
+  .lang-switch .lang-active {
+    background: var(--copper);
+    color: #fff;
+  }
+  .lang-switch a {
+    color: rgba(255,255,255,0.65);
+  }
+  .lang-switch a:hover {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+  @media (max-width: 900px) {
+    .nav-right { gap: 0.6rem; }
+  }
+
   .nav-cta {
     background: var(--copper);
     color: white;
@@ -498,6 +537,59 @@
     line-height: 1.3;
   }
 
+  /* ── CHARAKTERSTAERKEN ── */
+  #staerken { background: var(--sand); }
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  .strength-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.6rem 1.5rem;
+    position: relative;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .strength-card:hover {
+    box-shadow: 0 12px 32px rgba(28,59,59,0.10);
+    transform: translateY(-2px);
+  }
+  .strength-rank {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--border);
+    line-height: 1;
+    position: absolute;
+    top: 1.1rem;
+    right: 1.3rem;
+  }
+  .strength-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+    padding-right: 2.5rem;
+  }
+  .strength-virtue {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.7rem;
+  }
+  .strength-desc {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
   /* ── KONTAKT ── */
   #kontakt {
     background: var(--teal-mid);
@@ -598,16 +690,23 @@
     <li><a href="#about">Profil</a></li>
     <li><a href="#projekte">Projekte</a></li>
     <li><a href="#kompetenzen">Kompetenzen</a></li>
+    <li><a href="#staerken">Stärken</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
-  <a href="mailto:bolzal@protonmail.com" class="nav-cta">Kontakt aufnehmen</a>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <span class="lang-active">DE</span>
+      <a href="en.html" hreflang="en">EN</a>
+    </div>
+    <a href="mailto:bolzal@protonmail.com" class="nav-cta">Kontakt aufnehmen</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <div class="hero-label fade-up">Commercial Strategy · Business Development · EMEA</div>
+      <div class="hero-label fade-up">Growth · Business Development · Commercial Strategy</div>
       <h1 class="hero-name fade-up">Alina Bolz</h1>
       <div class="hero-title fade-up">Marktintelligenz in kommerzielle Wirkung übersetzen.</div>
       <p class="hero-thesis fade-up">
@@ -723,7 +822,7 @@
           <div class="step-period">2021 – 2022</div>
           <div class="step-role">Marketing & Communications Manager</div>
           <div class="step-org">EDA Präsenz Schweiz, Dubai · Milano</div>
-          <div class="step-desc">Go-to-Market international skaliert: 22 Unternehmenspartnerschaften, 60+ Events, Performance-Tracking-System von Null aufgebaut.</div>
+          <div class="step-desc">Internationale Mandate in Dubai und Milano: Kanaloptimierung, Partner- und Medienarbeit, operativ in vier Sprachen.</div>
         </div>
       </div>
       <div class="career-step">
@@ -815,24 +914,24 @@
     <!-- Project 3 -->
     <div class="project-card">
       <div class="project-card-top">
-        <div class="project-tag" style="background: var(--teal-light);">Go-to-Market & Partnerships</div>
+        <div class="project-tag" style="background: var(--teal-light);">International Partnerships & Performance</div>
         <div class="project-title">Internationale Kampagnen & Partnership Development</div>
         <div class="project-org">EDA Präsenz Schweiz · Dubai · Milano · 2021–2022</div>
       </div>
       <div class="project-body">
         <p class="project-desc">
-          Zwei internationale Mandate: Aufbau eines digitalen Performance-Tracking-Systems in Dubai; 
-          Steuerung von 22 Unternehmenspartnerschaften und 60+ Events in Milano. 
-          Multilinguale Umsetzung (DE/EN/AR/IT), Bundesebene-Reporting.
+          Zwei internationale Mandate für Präsenz Schweiz: Kanaloptimierung und Performance-Messung 
+          am Swiss Pavilion Expo 2020 Dubai; Content-, Partner- und Medienarbeit für das 
+          House of Switzerland Milano. Operativ in vier Sprachen (DE/EN/AR/IT), Reporting auf Bundesebene.
         </p>
         <div class="project-metrics">
           <div class="metric">
             <span class="metric-value">167%</span>
-            <span class="metric-label">Instagram-Follower-Wachstum Dubai</span>
+            <span class="metric-label">Follower-Wachstum Dubai durch datengetriebene Kanaloptimierung</span>
           </div>
           <div class="metric">
-            <span class="metric-value">14.1M+</span>
-            <span class="metric-label">Impressions durch datengetriebene Optimierung</span>
+            <span class="metric-value">22</span>
+            <span class="metric-label">Unternehmenspartnerschaften operativ betreut, alle Deliverables erfüllt</span>
           </div>
           <div class="metric">
             <span class="metric-value">200+</span>
@@ -990,6 +1089,69 @@
   </div>
 </section>
 
+<!-- CHARAKTERSTAERKEN -->
+<section id="staerken">
+  <div class="section-label">Charakterstärken</div>
+  <h2 class="section-title">Wie ich arbeite.</h2>
+  <p class="section-sub">
+    Meine fünf Signaturstärken aus dem VIA-Charakterstärken-Test – 
+    sie erklären, warum mir bestimmte Aufgaben leichtfallen und wo ich am meisten beitrage.
+  </p>
+  <div class="strengths-grid">
+
+    <div class="strength-card">
+      <span class="strength-rank">01</span>
+      <div class="strength-name">Liebe zum Lernen</div>
+      <span class="strength-virtue">Weisheit</span>
+      <p class="strength-desc">
+        Neue Fähigkeiten, Themen und Wissensgebiete meistern – im Selbststudium wie formal. 
+        Verwandt mit Neugier, geht aber darüber hinaus: die Tendenz, das eigene Wissen systematisch zu erweitern.
+      </p>
+    </div>
+
+    <div class="strength-card">
+      <span class="strength-rank">02</span>
+      <div class="strength-name">Weitblick</div>
+      <span class="strength-virtue">Weisheit</span>
+      <p class="strength-desc">
+        Anderen mit fundiertem Rat zur Seite stehen; eine Sichtweise auf die Welt haben, 
+        die für einen selbst und für andere Sinn ergibt.
+      </p>
+    </div>
+
+    <div class="strength-card">
+      <span class="strength-rank">03</span>
+      <div class="strength-name">Ehrlichkeit</div>
+      <span class="strength-virtue">Mut</span>
+      <p class="strength-desc">
+        Die Wahrheit sagen – und im weiteren Sinne sich authentisch zeigen und aufrichtig handeln. 
+        Ohne Verstellung; Verantwortung für die eigenen Gefühle und Handlungen übernehmen.
+      </p>
+    </div>
+
+    <div class="strength-card">
+      <span class="strength-rank">04</span>
+      <div class="strength-name">Humor</div>
+      <span class="strength-virtue">Transzendenz</span>
+      <p class="strength-desc">
+        Gerne lachen, anderen ein Lächeln ins Gesicht zaubern und die heitere Seite sehen – 
+        auch dann, wenn es anspruchsvoll wird.
+      </p>
+    </div>
+
+    <div class="strength-card">
+      <span class="strength-rank">05</span>
+      <div class="strength-name">Kreativität</div>
+      <span class="strength-virtue">Weisheit</span>
+      <p class="strength-desc">
+        Neuartige und produktive Wege finden, Dinge zu konzipieren und umzusetzen – 
+        über den erwartbaren Lösungsweg hinaus.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <!-- KONTAKT -->
 <section id="kontakt">
   <div class="section-label" style="color: var(--copper-light);">Bereit für den nächsten Schritt</div>
@@ -1029,7 +1191,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.project-card, .skill-block, .career-step, .bubble').forEach(el => {
+  document.querySelectorAll('.project-card, .skill-block, .career-step, .bubble, .strength-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
